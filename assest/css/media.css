@@ -1,0 +1,128 @@
+@media (max-width:1024px) {
+    .container-text{
+        padding-left: 120px;
+    }
+    .text p {
+        width: 65%;
+    }
+}
+
+@media (max-width:425px) {
+    header{
+        justify-content: space-between;
+    }
+    .logo{
+        margin-left: 2rem;
+    }
+    .logo i {
+        border: 3px solid;
+    }
+    nav{
+        margin-right: 1rem;
+    }
+    #contato{
+        display: none;
+    }
+    #btn-mobile{
+        display: block;
+    }
+    #menu{
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        top: 100px;
+        right: 0px;
+        background-color: #2ecc71;
+        height: 0px;
+        z-index: 2000;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #menu a {
+        font-size: 1.1rem;
+        color: #141414;
+    }
+    #nav.active #menu{
+        height: calc(100vh - 100px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #btn-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        width: 150px;
+        gap: .5rem;
+    }
+    #hamburguer{
+        width: 40px;
+        border-top: 3px solid #2ecc71 ;
+        display: block;
+        transition: .3s;
+    }
+    #hamburguer::after, #hamburguer::before{
+        content: '';
+        display: block;
+        width: 40px;
+        height: 3px;
+        background-color: #2ecc71;
+        margin-top: 8px;
+        transition: .6s;
+        position: relative;
+    }
+
+    #nav.active #hamburguer{
+        border-top-color:transparent ;
+    }
+    #nav.active #hamburguer::before{
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburguer::after{
+        transform: rotate(-135deg);
+         top: -11px;
+    }
+
+    .container-text{
+        min-width: 100vw;
+        display: flex;
+        justify-content: center;
+        padding-left: 20px;
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text h3{
+        font-size: 1rem;
+    }
+    .text h1{
+        font-size: 2rem;
+    }
+    .text p{
+        display: none;
+    }
+    .text .redes-sociais{
+        margin-top: 1rem;
+    }
+    .text .redes-sociais a{
+        font-size: 1.5rem;
+    }
+    .text .btn{
+        background-color: #2ecc71;
+        color: #141414;
+        font-weight: 500;
+        padding: 10px 30px;
+        border-radius: 25px;
+    }
+}
